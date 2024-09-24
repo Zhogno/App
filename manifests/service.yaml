@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: Lastapp
+  namespace: namespace-workflow-1727195936247
+  labels:
+    kubernetes.azure.com/generator: devhub
+spec:
+  type: LoadBalancer
+  selector:
+    app: Lastapp
+  ports:
+    - protocol: TCP
+      port: 8000
+      targetPort: 8000

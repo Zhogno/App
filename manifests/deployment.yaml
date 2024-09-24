@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: Lastapp
+  labels:
+    app: Lastapp
+    kubernetes.azure.com/generator: devhub
+  namespace: namespace-workflow-1727195936247
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: Lastapp
+  template:
+    metadata:
+      labels:
+        app: Lastapp
+    spec:
+      containers:
+        - name: Lastapp
+          image: acrworkflow1727195936247.azurecr.io/image-workflow-1727195936247:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8000
