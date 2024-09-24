@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: hello-world-container
-          image: AZbuild.azurecr.io/<image-name>:v1
+          image: AZbuild.azurecr.io/ZHApp:v1
           ports:
             - containerPort: 5000
 ---
