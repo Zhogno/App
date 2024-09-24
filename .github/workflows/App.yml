@@ -38,16 +38,16 @@ on:
   workflow_dispatch:
 
 env:
-  ACR_RESOURCE_GROUP: myWordPressAKSResourceGroupf2be0e
-  AZURE_CONTAINER_REGISTRY: acrworkflow1727175852335
-  CONTAINER_NAME: image-workflow-1727175852335
-  CLUSTER_RESOURCE_GROUP: myWordPressAKSResourceGroupf2be0e
-  CLUSTER_NAME: MSCI-uksouth-myAKSClusterf2be0e
+  ACR_RESOURCE_GROUP: myAKSResourceGroupf34a69
+  AZURE_CONTAINER_REGISTRY: acrworkflow1727193272410
+  CONTAINER_NAME: image-workflow-1727193272410
+  CLUSTER_RESOURCE_GROUP: myAKSResourceGroupf34a69
+  CLUSTER_NAME: myAKSClusterf34a69
   DEPLOYMENT_MANIFEST_PATH: |
     ./deployment.yaml
   DOCKER_FILE: ./deployment.yaml
   BUILD_CONTEXT_PATH: ./
-  NAMESPACE: namespace-workflow-1727175852335
+  NAMESPACE: namespace-workflow-1727193272410
 
 jobs:
   buildImage:
