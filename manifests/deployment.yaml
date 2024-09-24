@@ -1,24 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: Lastapp
+  name: zhohno
   labels:
-    app: Lastapp
+    app: zhohno
     kubernetes.azure.com/generator: devhub
-  namespace: namespace-workflow-1727195936247
+  namespace: namespace-workflow-1727197512279
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: Lastapp
+      app: zhohno
   template:
     metadata:
       labels:
-        app: Lastapp
+        app: zhohno
     spec:
       containers:
-        - name: Lastapp
-          image: acrworkflow1727195936247.azurecr.io/image-workflow-1727195936247:latest
+        - name: zhohno
+          image: acrworkflow1727197512279.azurecr.io/image-workflow-1727197512279:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8000

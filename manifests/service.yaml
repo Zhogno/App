@@ -1,14 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: Lastapp
-  namespace: namespace-workflow-1727195936247
+  name: zhohno
+  namespace: namespace-workflow-1727197512279
   labels:
     kubernetes.azure.com/generator: devhub
 spec:
   type: LoadBalancer
   selector:
-    app: Lastapp
+    app: zhohno
   ports:
     - protocol: TCP
       port: 8000
