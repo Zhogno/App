@@ -6,7 +6,7 @@ WORKDIR /usr/src/app
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY . .
+COPY . /usr/src/app
 
 ENTRYPOINT ["python"]
 CMD ["app.py"]
