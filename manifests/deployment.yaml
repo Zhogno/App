@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: energy
+  labels:
+    app: energy
+    kubernetes.azure.com/generator: devhub
+  namespace: namespace-workflow-1727255034610
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: energy
+  template:
+    metadata:
+      labels:
+        app: energy
+    spec:
+      containers:
+        - name: energy
+          image: acrworkflow1727255034610.azurecr.io/image-workflow-1727255034610:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8000
