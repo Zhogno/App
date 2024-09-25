@@ -1,12 +1,11 @@
-FROM python:3.11-slim
-ENV PORT 8000
-EXPOSE 8000
-WORKDIR /usr/src/app
+# Use an official Python runtime as a parent image
+FROM python:3.8-slim
 
-COPY requirements.txt ./
-RUN pip install --no-cache-dir -r requirements.txt
+# Set the working directory in the container
+WORKDIR /app
 
-COPY . /usr/src/app
+# Copy the local directory contents into the container at /app
+COPY . /app
 
-ENTRYPOINT ["python"]
-CMD ["app.py"]
+# Run Python script when the container launches
+CMD ["python", "hello_world.py"]
